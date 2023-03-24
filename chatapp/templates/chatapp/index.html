@@ -4,11 +4,21 @@
 <head>
     <meta charset="utf-8"/>
     <title>Chat Rooms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
 </head>
 <body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+    <div class="jumbotron">
+        <h3>Public Chat</h3>
+        <div class="d-flex flex-column justify-content-center">
+            <h6>What chat room would you like to enter?</h6>
+            <div class="d-flex flex-row">
+                <input id="room-name-input" type="text" placeholder="Room"><br>
+                <input id="room-name-submit" type="button" value="Enter">
+            </div>
+            
+        </div>
+    </div>
 
     <script>
         document.querySelector('#room-name-input').focus();
@@ -23,5 +33,6 @@
             window.location.pathname = '/chat/' + roomName + '/';
         };
     </script>
+
 </body>
 </html>
